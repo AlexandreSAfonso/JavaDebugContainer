@@ -3,10 +3,15 @@
 {
 	"name": "Java",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/java:1-21-bullseye",
+	"image": "mcr.microsoft.com/devcontainers/java:1-17-bookworm",
 
 	"features": {
-		"ghcr.io/devcontainers/features/java:1": {}
+		"ghcr.io/devcontainers/features/java:1": {},
+		"ghcr.io/devcontainers-extra/features/maven-sdkman:2": {
+			"version": "3.9.4",
+			"installMaven": true,
+			"installSdkman": true
+		}
 	},
 	"customizations": {
 		"vscode": {
